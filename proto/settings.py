@@ -31,13 +31,17 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'quiz',
+    'quiz_22',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_quiz.quiz',
+    'django_quiz.essay',
+    'django_quiz.multichoice',
+    # 'django_quiz.true_false',
 ]
 
 MIDDLEWARE_CLASSES = [

@@ -29,7 +29,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('correct', models.BooleanField(default=False)),
                 ('text', models.CharField(max_length=255)),
-                ('question', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='multipleChoice', to='quiz.MultipleChoice')),
+                ('question', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='multipleChoice', to='quiz_22.MultipleChoice')),
             ],
         ),
         migrations.CreateModel(
@@ -63,12 +63,12 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('correct', models.BooleanField(default=False)),
-                ('question', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='truefalse', to='quiz.TrueFalse')),
+                ('question', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='truefalse', to='quiz_22.TrueFalse')),
             ],
         ),
         migrations.AddField(
             model_name='question',
             name='quiz',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='question', to='quiz.Quiz'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='question', to='quiz_22.Quiz'),
         ),
     ]

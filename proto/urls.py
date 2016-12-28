@@ -18,6 +18,7 @@ from django.contrib import admin
 
 
 urlpatterns = [
-	url(r'^quiz/', include('quiz.urls')),
+	url(r'^quiz/', include('quiz_22.urls')),
+	url(r'^django_quiz/', include('django_quiz.quiz.urls')),
     url(r'^admin/', admin.site.urls),
 ]

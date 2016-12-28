@@ -1,0 +1,65 @@
+*.py[cod]
+*.pyc
+__pycache__
+
+# Logs
+*.log
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
+
+# Translations
+*.mo
+*.pot
+
+db.sqlite3
+# Pycharm
+.idea
+
+# Vim
+
+*~
+*.swp
+*.swo
+*.cache/
+
+# npm
+node_modules/
+tuteria/node_modules/
+# Campass
+.sass-cache
+
+# bower
+bower_components/
+tuteria/static/javascripts/vendor/mathjax/
+*.dmp
+*.map
+compressed/
+Tuteria Emails/
+staticfiles
+Tuteria.egg-info/
+frontend/.idea/
+frontend/sass/.idea/
+backend.sublime-project
+backend.sublime-workspace
+*.pid
+.vagrant
+Tuteria.egg-info
+vms/
+tuteria/.idea/
+tuteria/templates/.idea/
+.docker/
+*.db
+.settings/
+typings/
+frontend/src/typings/
+*.sublime-project
+*.sublime-workspace
+.vscode/
+frontend/node_modules/
+
+venv/
+src/
