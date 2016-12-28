@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<form action="." method="post">
+		{% csrf_token %}
+		{{ que_form.as_p }}
+		{{ ans_form.as_p}}
+		<input type="submit" name="addmultichoice" value="New multi choice">	
+		<input type="submit" name="addtruefalse" value="New ture false">		
+	</form>
+{% endblock %}

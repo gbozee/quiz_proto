@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	{% with questions=quiz.question.all %}
+	<form method="post" action="." name="quiz_box">
+		{% csrf_token %}
+		<input type="hidden" name="q1" value="{{ quiz.id }}">
+		{% for q in questions %}
+		
+			<h2>{{ q.text }}</h2>
+			{% if q.content_object.choice == 'truefalse' %}
+				{% for m in q.content_object.truefalse.all %}
+					{% if m.correct == True %}
+						<label>
+							<input type="radio" name="{{q.id}}" value="{{ m.correct }}"> {{m.correct}} <br>
+						</label>
+						<label>
+							<input type="radio" name="{{q.id}}" value="False"> False
+						</label>
+					{% else %}
+						<label>
+							<input type="radio" name="{{q.id}}" value="True"> True <br>
+						</label>
+						<label>
+							<input type="radio" name="{{q.id}}" value="{{ m.correct }}"> {{m.correct}}
+						</label>
+					{% endif %}
+				{% endfor %}
+			{% elif q.content_object.choice == 'multiplechoice' %}
+				{% for t in q.content_object.multiplechoice.all %}
+					<label>
+						<input type="radio" name="{{q.id}}" value="{{ t.text }}">
+						{{t.correct}} | {{t.text}} 
+					</label>
+					<br>
+				{% endfor %}
+			{% endif %}
+			<hr>
+		{% endfor %}
+	{% endwith %}
+		<input type="submit" name="">
+	</form>
+	
+{% endblock %}

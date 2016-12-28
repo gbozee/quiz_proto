@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<a href="{% url 'create_quiz' %}">Create Quiz</a>
+	{% for quiz in quizzes %}
+		<h2><a href="{% url 'quiz_detail' quiz.id %}">{{ quiz.title }}</a></h2>
+	{% endfor %}
+{% endblock %}
